@@ -19,14 +19,23 @@
 /* HERO  */
 
 @font-face {
-  font-family: myfont;
+  font-family: nameCat;
   src: url('./font/catboo/Catboo.ttf');
+}
+
+@font-face {
+  font-family: normalWords;
+  src: url('./font/cartoonish/Cartoonish.ttf');
+  
+}
+body{
+  font-family: normalWords;
+  font-weight: lighter;
 }
 
 #hero{
   height: 90vh;
 }
-
-body{
-  font-family: myfont;
+.cat{
+  font-family: nameCat;
 }
