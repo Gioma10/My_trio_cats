@@ -39,5 +39,9 @@ body{
   font-family: nameCat;
 }
 
+.smallest-p{
+  font-size: 10px;
+}
+
 /* navbar */
 
