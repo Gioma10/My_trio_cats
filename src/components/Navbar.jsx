@@ -4,7 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosClose } from "react-icons/io";
 import { useState } from "react";
 
-export default function Navbar(){
+export default function Navbar({path}){
     const[activeHamb, setActiveHamb]= useState(false)
 
     function handleHamburger(){
@@ -13,9 +13,9 @@ export default function Navbar(){
     return (
         <nav className="fixed flex justify-center w-full text-xs sm:text-sm md:text-lg z-10">
             <div className="hidden sm:w-5/6 md:w-4/5 lg:w-2/3 bg-white sm:flex justify-around items-center py-2 shadow-lg rounded-b-lg">
-                <p className=" text-xl sm:text-2xl md:text-4xl text-center"><IoMdHome /></p>
+                <a href="/home" className=" text-xl sm:text-2xl md:text-4xl text-center"><IoMdHome /></a>
                 <ul className="flex gap-8">
-                    <li>Galleria</li>
+                    <li className={path === 'galleria' && 'border-b-2 border-black'}><a href="/galleria">Galleria</a></li>
                     <li>Skills</li>
                     <li>Mamma & Papa'</li>
                     <li>Contattaci</li>
@@ -27,7 +27,7 @@ export default function Navbar(){
                 {activeHamb && (
                     <div className="bg-black text-white">
                         <ul className="flex flex-col gap-4 p-5 justify-center items-center w-full z-10">
-                            <li>Galleria</li>
+                            <li><a href="/galleria">Galleria</a></li>
                             <li>Skills</li>
                             <li>Mamma & Papa'</li>
                             <li>Contattaci</li>

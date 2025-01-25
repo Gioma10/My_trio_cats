@@ -1,12 +1,19 @@
-import Header from './components/Header.jsx'
-import Navbar from './components/Navbar.jsx'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+import Home from "./pages/Home"
+import Gallery from "./pages/Gallery"
 
 function App() {
 
   return (
     <>
-      <Navbar />
-      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/galleria" element={<Gallery />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
