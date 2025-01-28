@@ -43,8 +43,11 @@ body{
   font-size: 10px;
 }
 
-/* navbar */
+/* Navbar */
 
 .link:active{
   border-bottom: 1px solid black;
 }
+
+
+/* Gallery */
