@@ -1,4 +1,4 @@
-import Lucy from '../assets/image/lucy_profile.png'
+import Lucy from '../../assets/image/lucy_profile.png'
 import { TiArrowDownOutline } from "react-icons/ti";
 import { useState } from 'react';
 

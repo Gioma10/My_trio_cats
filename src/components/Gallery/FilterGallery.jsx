@@ -16,7 +16,7 @@ export default function FilterGallery(){
         })
         
     }
-    console.log(pressBtn);
+    // console.log(pressBtn);
 
     
     let classBtn = " bg-white px-4 py-2 rounded-lg border-black border-2";

@@ -1,4 +1,4 @@
-import Mona from '../assets/image/mona_profile.png'
+import Mona from '../../assets/image/mona_profile.png'
 import { TiArrowDownOutline } from "react-icons/ti";
 import { useState } from 'react';
 

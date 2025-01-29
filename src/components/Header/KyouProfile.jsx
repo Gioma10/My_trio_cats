@@ -1,4 +1,4 @@
-import Kyou from '../assets/image/kyou_profile.png'
+import Kyou from '../../assets/image/kyou_profile.png'
 import { TiArrowDownOutline } from "react-icons/ti";
 import { useState } from 'react';
 

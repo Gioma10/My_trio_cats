@@ -1,0 +1,25 @@
+{
+    "gallery":[
+        {
+            "id": 1,
+            "cat": "lucy",
+            "img": "../../assets/image/Gallery/photo1.webp"
+        },
+        {
+            "id": 2,
+            "cat": "mona",
+            "img": "../../assets/image/Gallery/photo2.webp"
+        },
+        {
+            "id": 3,
+            "cat": "kyou",
+            "img": "../../assets/image/Gallery/photo3.webp"
+        },
+        {
+            "id": 4,
+            "cat": "lucy",
+            "img": "../../assets/image/Gallery/photo4.webp"
+        }
+
+    ]
+}
