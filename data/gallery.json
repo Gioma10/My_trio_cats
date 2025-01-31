@@ -2,23 +2,73 @@
     "gallery":[
         {
             "id": 1,
-            "cat": "lucy",
-            "img": "../../assets/image/Gallery/photo1.webp"
+            "firstCat": "lucy",
+            "secondCat": false,
+            "thirdCat": false,
+            "img": "./src/assets/image/Gallery/photo1.webp"
         },
         {
             "id": 2,
-            "cat": "mona",
-            "img": "../../assets/image/Gallery/photo2.webp"
+            "firstCat": false,
+            "secondCat": false,
+            "thirdCat": "mona",
+            "img": "./src/assets/image/Gallery/photo2.webp"
         },
         {
             "id": 3,
-            "cat": "kyou",
-            "img": "../../assets/image/Gallery/photo3.webp"
+            "firstCat": false,
+            "secondCat": "kyou",
+            "thirdCat": false,
+            "img": "./src/assets/image/Gallery/photo3.webp"
         },
         {
             "id": 4,
-            "cat": "lucy",
-            "img": "../../assets/image/Gallery/photo4.webp"
+            "firstCat": "lucy",
+            "secondCat": false,
+            "thirdCat": false,
+            "img": "./src/assets/image/Gallery/photo4.webp"
+        },
+        {
+            "id": 5,
+            "firstCat": "lucy",
+            "secondCat": "kyou",
+            "thirdCat": false,
+            "img": "./src/assets/image/Gallery/photo8.webp"
+        },
+        {
+            "id": 6,
+            "firstCat": false,
+            "secondCat": "kyou",
+            "thirdCat": "mona",
+            "img": "./src/assets/image/Gallery/photo10.webp"
+        },
+        {
+            "id": 7,
+            "firstCat": false,
+            "secondCat": "kyou",
+            "thirdCat": false,
+            "img": "./src/assets/image/Gallery/photo5.webp"
+        },
+        {
+            "id": 8,
+            "firstCat": false,
+            "secondCat": false,
+            "thirdCat": "mona",
+            "img": "./src/assets/image/Gallery/photo6.webp"
+        },
+        {
+            "id": 9,
+            "firstCat": "lucy",
+            "secondCat": false,
+            "thirdCat": false,
+            "img": "./src/assets/image/Gallery/photo7.webp"
+        },
+        {
+            "id": 10,
+            "firstCat": false,
+            "secondCat": false,
+            "thirdCat": "mona",
+            "img": "./src/assets/image/Gallery/photo9.webp"
         }
 
     ]
