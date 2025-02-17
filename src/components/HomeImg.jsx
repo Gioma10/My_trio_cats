@@ -30,6 +30,7 @@ export default function HomeImg(){
                 <motion.p>
                     vedi tutte
                 </motion.p>
+                
                 <TiArrowRightOutline />
             </Link>
         </div>
