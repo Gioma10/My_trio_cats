@@ -9,7 +9,7 @@ import RootLayout from "./Layout/RootLayout.jsx"
 const router= createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout/>}>
-      <Route index element={<Home/>} />
+      <Route index element={<Home/>} loader={photosLoader} />
       <Route path="galleria" element={<Gallery/>} loader={photosLoader}/>
       <Route path="*" element={<ErrorPage/>} />
     </Route>

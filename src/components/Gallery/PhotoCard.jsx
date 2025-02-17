@@ -9,13 +9,6 @@ export default function PhotoCard({whoActive, cat, cat2, cat3, img}){
         setBigPhoto(prevState => !prevState);
     }
 
-    // if(whoActive[name]=== true){
-    //     console.log('Ci sono solo foto di', name);
-        
-    // }
-    
-
-
     return (
         <>
         {((whoActive[cat] === true || !cat) && (whoActive[cat2] === true || !cat2) && (whoActive[cat3] === true || !cat3)) &&

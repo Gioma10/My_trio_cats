@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, press } from "motion/react";
 import FilterGallery from "../components/Gallery/FilterGallery";
 import PhotoCard from "../components/Gallery/PhotoCard";
 
@@ -10,8 +11,16 @@ export default function Gallery(){
              kyou: true,
              mona: true,
          })
- const photos= useLoaderData(); 
-     function handlePressBtn(identifer){
+    const [loading, setLoading] = useState(true);
+    const photos= useLoaderData(); 
+
+    useEffect(() => {
+        if (photos.length > 0) {
+            setLoading(false); // Disattiva il loading quando i dati sono pronti
+        }
+    }, [photos]);
+
+    function handlePressBtn(identifer){
         setPressBtn(prevBtn => {
             return {
                 ...prevBtn,
@@ -27,21 +36,36 @@ export default function Gallery(){
         <>
             
                 <FilterGallery handleSelectBtn={handlePressBtn} selectBtn={pressBtn}/>
-                <div className='mt-10 rounded-lg grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10'>
-                    {photos.map((photo)=>{
-                        return (
-                            <PhotoCard 
-                                key={photo.id} 
-                                cat={photo.firstCat} 
-                                cat2={photo.secondCat} 
-                                cat3={photo.thirdCat} 
-                                img={photo.img} 
-                                whoActive= {pressBtn}
-                            />   
-                        )
-                    })}
-                </div>
-            
+                {loading ? (
+                    <motion.div 
+                        animate={{opacity:[1,0, 1]}}
+                        transition={{duration:2 , repeat: Infinity,}}
+                        className="flex justify-center items-center mt-72 ">
+                        <p className="text-lg font-semibold">Caricamento immagini...</p>
+                    </motion.div> )
+                : (
+                    <div className='mt-10 rounded-lg grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10'>
+                        {photos.map((photo)=>{
+                            return (
+                                <PhotoCard 
+                                    key={photo.id} 
+                                    cat={photo.firstCat} 
+                                    cat2={photo.secondCat} 
+                                    cat3={photo.thirdCat} 
+                                    img={photo.img} 
+                                    whoActive= {pressBtn}
+                                />   
+                            )
+                        })}
+                    </div>)
+                }
+
+                {(!pressBtn.lucy && !pressBtn.kyou && !pressBtn.mona) && (
+                    <div className="flex justify-center items-center mt-72 ">
+                        <p className="text-lg font-semibold">Seleziona un gatto cliccando il bottone in alto </p>
+                    </div>
+                )}
+        
         </>
     )
 }

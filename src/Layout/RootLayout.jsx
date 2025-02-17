@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
-export default function RootLayout({path}){
+export default function RootLayout(){
     return(
         <>
-            <Navbar path={path}/>
+            <Navbar/>
             <main>
                 <Outlet />
             </main>
