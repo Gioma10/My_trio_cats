@@ -41,12 +41,12 @@ export default function Skills (){
             }
             <button 
                 onClick={()=>handleChangeCat('-')}
-                className="absolute top-1/2 left-0 text-4xl p-5 hover:animate-pulse">
+                className="absolute top-1/2 left-0 text-2xl md:text-4xl p-5 hover:animate-pulse">
                 <TiArrowLeftOutline />
             </button>
             <button 
                 onClick={()=>handleChangeCat('+')}
-                className="absolute top-1/2 right-0 text-4xl p-5 hover:animate-pulse">
+                className="absolute top-1/2 right-0 text-2xl md:text-4xl p-5 hover:animate-pulse">
                 <TiArrowRightOutline />
             </button>
         </div>
