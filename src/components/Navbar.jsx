@@ -16,16 +16,19 @@ export default function Navbar(){
         {title: 'Galleria', path:'/galleria'},
         {title: 'Skills', path:'/skills'},
         {title: 'Mamma & Papa', path:'/mamma&papa'},
-        {title: 'Contattci', path:'/contattaci'},
+        {title: 'Contattaci', path:'/contattaci'},
     ]
     return (
         <nav className="fixed flex justify-center w-full text-xs sm:text-sm md:text-lg z-10">
             <div className="hidden sm:w-5/6 md:w-4/5 lg:w-2/3 bg-white sm:flex justify-around items-center py-2 shadow-lg rounded-b-lg">
                 <NavLink to={"/"} className=" text-xl sm:text-2xl md:text-4xl text-center"><IoMdHome /></NavLink>
                 <div className="flex gap-8">
-                    {navLinks.map((link)=>{
+                    {navLinks.map((link, index)=>{
                         return (
-                            <NavLink key={link.title} to={link.path}>
+                            <NavLink 
+                                className={({isActive})=> isActive && 'border-b-2 border-b-black'} 
+                                key={index} 
+                                to={link.path}>
                                 {link.title}
                             </NavLink>
                         )
@@ -38,11 +41,12 @@ export default function Navbar(){
                 {activeHamb && (
                     <div className="bg-black text-white">
                         <div className="flex flex-col gap-4 p-5 justify-center items-center w-full z-10">
-                            {navLinks.map((link)=>{
+                            {navLinks.map((link, index)=>{
                                 return (
-                                    <NavLink key={link.title} to={link.path}>
-                                        {link.title}
-                                    </NavLink>
+                                    <NavLink 
+                                        className={({isActive})=>isActive && 'border-2 border-black'}
+                                        key={index} 
+                                        to={link.path}/>
                                 )
                             })}
                         </div>
