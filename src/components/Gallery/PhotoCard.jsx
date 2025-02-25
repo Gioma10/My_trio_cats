@@ -12,7 +12,7 @@ export default function PhotoCard({whoActive, cat, cat2, cat3, img}){
     return (
         <>
         {((whoActive[cat] === true || !cat) && (whoActive[cat2] === true || !cat2) && (whoActive[cat3] === true || !cat3)) &&
-            <div style={{backgroundImage:`url(${img})`}}className='h-72 bg-center bg-cover bg-no-repeat rounded-lg shadow-lg group'  >
+            <div style={{backgroundImage:`url(${img})`}}className='h-72 border-white border bg-center bg-cover bg-no-repeat rounded-lg shadow-lg group'  >
                 <div className='bg-white/30 hidden group-hover:flex backdrop-blur-sm w-full h-full justify-center items-center'>
                     <HiMagnifyingGlassPlus onClick={handleGlass} className="text-4xl cursor-pointer hover:text-zinc-50"/>
                 </div>

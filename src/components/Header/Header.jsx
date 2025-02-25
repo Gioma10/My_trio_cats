@@ -4,7 +4,7 @@ import MonaProfile from './MonaProfile.jsx'
 export default function Header(){
     
     return(
-        <header id="hero" className="hero grid gap-4 sm:grid-cols-3 z-0">
+        <header id="hero" className="grid border-b sm:grid-cols-3 z-0">
             <LucyProfile />
             <KyouProfile />
             <MonaProfile />

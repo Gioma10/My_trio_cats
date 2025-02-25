@@ -9,11 +9,11 @@ export default function RootLayout(){
         window.scrollTo(0, 0); // Resetta lo scroll all'inizio della pagina
     }, [location.pathname]); // Si attiva ogni volta che cambia la route
     return(
-        <>
+        <div>
             <Navbar/>
             <main>
                 <Outlet />
             </main>
-        </>
+        </div>
     )
 }

@@ -44,7 +44,7 @@ export default function Gallery(){
                         <p className="text-lg font-semibold">Caricamento immagini...</p>
                     </motion.div> )
                 : (
-                    <div className='mt-10 rounded-lg grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10'>
+                    <div className='my-10 rounded-lg grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10'>
                         {photos.map((photo)=>{
                             return (
                                 <PhotoCard 
@@ -62,7 +62,7 @@ export default function Gallery(){
 
                 {(!pressBtn.lucy && !pressBtn.kyou && !pressBtn.mona) && (
                     <div className="flex justify-center items-center mt-72 ">
-                        <p className="text-lg font-semibold">Seleziona un gatto cliccando il bottone in alto </p>
+                        <p className="text-lg text-white bg-[#3A3A3A] border-white border rounded-xl p-5 font-semibold">Seleziona un gatto cliccando il bottone in alto </p>
                     </div>
                 )}
         

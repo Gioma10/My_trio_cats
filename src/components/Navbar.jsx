@@ -13,28 +13,23 @@ export default function Navbar(){
     }
 
     const navLinks= [
+        {title: <IoMdHome size={30}/>, path:'/'},
         {title: 'Galleria', path:'/galleria'},
         {title: 'Skills', path:'/skills'},
         {title: 'Mamma & Papa', path:'/mamma&papa'},
-        {title: 'Contattaci', path:'/contattaci'},
     ]
     return (
         <nav className="fixed flex justify-center w-full text-xs sm:text-sm md:text-lg z-10">
-            <div className="hidden sm:w-5/6 md:w-4/5 lg:w-2/3 bg-white sm:flex justify-around items-center py-2 shadow-lg rounded-b-lg">
-                <NavLink to={"/"} className=" text-xl sm:text-2xl md:text-4xl text-center"><IoMdHome /></NavLink>
-                <div className="flex gap-8">
-                    {navLinks.map((link, index)=>{
-                        return (
-                            <NavLink 
-                                className={({isActive})=> isActive && 'border-b-2 border-b-black'} 
-                                key={index} 
-                                to={link.path}>
-                                {link.title}
-                            </NavLink>
-                        )
-                    })}
-                </div>
-                <p className="text-xl"><FaInstagram/></p>
+            <div className="flex items-end justify-center gap-8 py-3 px-10 rounded-lg mt-1 border-white border bg-[#3A3A3A] text-white">                    {navLinks.map((link, index)=>{
+                    return (
+                        <NavLink 
+                            className={({isActive})=> isActive ? 'border-b-2 border-b-white' : ''} 
+                            key={index} 
+                            to={link.path}>
+                            {link.title}
+                        </NavLink>
+                    )
+                })}
             </div>
             <div className="sm:hidden w-full bg-white shadow-lg">
                 <button className="text-4xl p-2" onClick={handleHamburger}> {!activeHamb ? <RxHamburgerMenu/> : <IoIosClose />}</button>
@@ -44,7 +39,7 @@ export default function Navbar(){
                             {navLinks.map((link, index)=>{
                                 return (
                                     <NavLink 
-                                        className={({isActive})=>isActive && 'border-2 border-black'}
+                                        className={({isActive})=>isActive ? 'border-2 border-black' : ''}
                                         key={index} 
                                         to={link.path}/>
                                 )

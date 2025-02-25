@@ -29,15 +29,15 @@ export default function Skills (){
         }
     }
     return (
-        <div className="h-screen relative">
+        <div className="h-screen relative flex items-center justify-center text-white">
             {activeCat === 0 && 
-                <SingleCat name='Lucy' cat={Lucy} bgColor='bg-[#808080]' rotate='' textColor='text-[#575757]'/> 
+                <SingleCat name='Lucy' cat={Lucy}  rotate='' textColor=''/> 
             }
             {activeCat === 1 && 
-                <SingleCat name='Kyou' cat={Kyou} bgColor='bg-[#F2B13B]' rotate='rotate-[30deg]' textColor='text-[#A87F34]'/> 
+                <SingleCat name='Kyou' cat={Kyou} rotate='rotate-[30deg]'/> 
             }
             {activeCat === 2 && 
-                <SingleCat name='Mona' cat={Mona} bgColor='bg-[#987654]' rotate='rotate-[-25deg]' textColor='text-[#694F36]'/> 
+                <SingleCat name='Mona' cat={Mona} rotate='rotate-[-25deg]'/> 
             }
             <button 
                 onClick={()=>handleChangeCat('-')}
