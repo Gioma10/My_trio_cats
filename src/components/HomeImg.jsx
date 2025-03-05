@@ -12,7 +12,7 @@ export default function HomeImg(){
     return (
         <div className='py-20 px-10 text-white'>
             <div className='flex flex-col justify-center text-center py-10 px-5 rounded-lg gap-4 border bg-[#3A3A3A]'>
-                <h2 className='text-4xl'>Le Nostre Ultime Foto</h2>
+                <h2 className='text-4xl'>Le Ultime Foto</h2>
                 <div className=' p-10 grid grid-cols-4 gap-8'>
                     {lastThreePhotos.map((photo)=>{
                         return (

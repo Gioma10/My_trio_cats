@@ -1,4 +1,4 @@
-import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route} from "react-router-dom"
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Routes} from "react-router-dom"
 import { photosLoader } from "./pages/Gallery.jsx"
 
 import Home from "./pages/Home"

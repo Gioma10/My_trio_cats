@@ -31,23 +31,6 @@ export default function Navbar(){
                     )
                 })}
             </div>
-            <div className="sm:hidden w-full bg-white shadow-lg">
-                <button className="text-4xl p-2" onClick={handleHamburger}> {!activeHamb ? <RxHamburgerMenu/> : <IoIosClose />}</button>
-                {activeHamb && (
-                    <div className="bg-black text-white">
-                        <div className="flex flex-col gap-4 p-5 justify-center items-center w-full z-10">
-                            {navLinks.map((link, index)=>{
-                                return (
-                                    <NavLink 
-                                        className={({isActive})=>isActive ? 'border-2 border-black' : ''}
-                                        key={index} 
-                                        to={link.path}/>
-                                )
-                            })}
-                        </div>
-                    </div>
-                )}
-            </div>
         </nav>
     )
 }

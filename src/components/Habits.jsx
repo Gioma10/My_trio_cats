@@ -1,27 +1,19 @@
-import Dormire from '../assets/image/dormire.png'
-import Mangiare from '../assets/image/mangiare.png'
-import Giocare from '../assets/image/giocare.png'
+// import Dormire from '../assets/image/dormire.png'
+// import Mangiare from '../assets/image/mangiare.png'
+// import Giocare from '../assets/image/giocare.png'
+
+import Timeline from "./Timeline";
 
 export default function Habits(){
 
-    const habitsArr= [Dormire, Mangiare, Giocare]
+
     return (
-        <div className=''>
-            <div className="grid grid-cols-3 w-full items-center py-20">
-                <div className="bg-[#3A3A3A] text-white flex row-start-1 col-span-2 flex-col border-y border-r items-center justify-center rounded-r-lg py-10 px-5">
-                    <h2 className="text-4xl">Le nostre abitudini</h2>
-                    <p>Questa e' la nostra routine, sembra povera e montona ma a noi piace cosi'</p>
-                </div>
+        <div className='h-screen flex flex-col gap-10 bg-[#3A3A3A] m-10 rounded-xl border overflow-hidden'> 
+            <div className="bg-[#3A3A3A] text-white flex row-start-1 col-span-2 flex-col items-center justify-center rounded-xl py-10 px-5">
+                <h2 className="text-6xl">Le abitudini</h2>
+                <p className="filterFont">Questa e' la nostra routine, sembra povera e montona ma a noi piace cosi'</p>
             </div>
-            <div className="flex gap-10 mt-20 ">
-                {habitsArr.map((habit, index)=>{
-                    return (
-                        <div className='px-10' key={index}>
-                            <img src={habit} alt="routine" className='w-full' />
-                        </div>
-                    )
-                })}
-            </div>
+            <Timeline />
         </div>
     )
 }
