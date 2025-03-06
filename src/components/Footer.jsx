@@ -19,10 +19,10 @@ export default function Footer(){
                 {/* Navigazione Veloce */}
                 <nav className="mb-6 md:mb-0">
                     <ul className="flex flex-col md:flex-row items-center gap-2 text-xs md:text-sm">
-                        <li><Link to='/' className="hover:text-gray-400 md:border-e">Home</Link></li>
-                        <li><Link to="/galleria" className="hover:text-gray-400 md:border-e">Galleria</Link></li>
-                        <li><Link to="/skills" className="hover:text-gray-400 md:border-e">Skills</Link></li>
-                        <li><Link to="/mamma&papa" className="hover:text-gray-400 ">Mamma & papa'</Link></li>
+                        <li><Link to='/' className="hover:text-gray-400 md:px-5 md:border-e">Home</Link></li>
+                        <li><Link to="/galleria" className="hover:text-gray-400 md:px-5 md:border-e">Galleria</Link></li>
+                        <li><Link to="/skills" className="hover:text-gray-400 md:px-5 md:border-e">Skills</Link></li>
+                        <li><Link to="/mamma&papa" className="hover:text-gray-400 md:px-5 ">Mamma & papa'</Link></li>
                     </ul>
                 </nav>
             </div>
