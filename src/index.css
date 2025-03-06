@@ -58,3 +58,23 @@ body{
   font-family: nameCat;
 }
 
+
+/* Home Image  */
+
+@media screen and (max-width: 400px) {
+  .smallest-h{
+    height: 6rem;
+  }
+}
+
+
+/* Habits  */
+
+@media screen and (max-width: 500px) {
+  .smallest-size-p{
+    font-size: 8px;
+  }
+  .smallest-size-h3{
+    font-size: 20px;
+  }
+}

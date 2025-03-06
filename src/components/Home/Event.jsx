@@ -1,11 +1,12 @@
-export default function Event({direction, h3, p}){
+export default function Event({direction, time, h3, p}){
     return (
         <>
         {direction === 'left' ? 
-            <div className="flex items-center w-full text-white">
-                <div className="w-1/2 text-right">
-                    <h3 className="text-lg font-semibold">{h3}</h3>
-                    <p className="text-sm italic">{p}</p>
+            <div className="flex gap-2 items-center w-full text-white">
+                <div className="w-1/2 text-left sm:text-right">
+                    <p>{time}</p>
+                    <h3 className="text-xs sm:text-base md:text-xl font-semibold">{h3}</h3>
+                    <p className=" smallest-size-p text-xs md:text-sm italic">{p}</p>
                 </div>
                 <div className="w-1/12 flex justify-center">
                     <div className="w-6 h-6 bg-white rounded-full"></div>
@@ -13,14 +14,15 @@ export default function Event({direction, h3, p}){
                 <div className="w-1/2"></div>
             </div>
         :
-            <div className="flex items-center w-full text-white">
+            <div className="flex gap-2 items-center w-full text-white">
                 <div className="w-1/2"></div>
                 <div className="w-1/12 flex justify-center">
                     <div className="w-6 h-6 bg-white rounded-full"></div>
                 </div>
-                <div className="w-1/2 text-left">
-                    <h3 className="text-lg font-semibold">{h3}</h3>
-                    <p className="text-sm italic">{p}</p>
+                <div className="w-1/2 text-right sm:text-left">
+                    <p>{time}</p>
+                    <h3 className="text-xs sm:text-base md:text-xl font-semibold">{h3}</h3>
+                    <p className="smallest-size-p text-xs md:text-sm italic">{p}</p>
                 </div>
             </div>
         }

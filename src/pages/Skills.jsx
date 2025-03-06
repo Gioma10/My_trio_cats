@@ -31,7 +31,7 @@ export default function Skills (){
     return (
         <div className="h-screen relative flex items-center justify-center text-white">
             {activeCat === 0 && 
-                <SingleCat name='Lucy' cat={Lucy}  rotate='' textColor=''/> 
+                <SingleCat name='Lucy' cat={Lucy}/> 
             }
             {activeCat === 1 && 
                 <SingleCat name='Kyou' cat={Kyou} rotate='rotate-[30deg]'/> 

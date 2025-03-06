@@ -36,14 +36,19 @@ export default function Gallery(){
         <>
             
                 <FilterGallery handleSelectBtn={handlePressBtn} selectBtn={pressBtn}/>
-                {loading ? (
+                {loading && (
                     <motion.div 
                         animate={{opacity:[1,0, 1]}}
                         transition={{duration:2 , repeat: Infinity,}}
                         className="flex justify-center items-center mt-72 ">
                         <p className="text-lg font-semibold">Caricamento immagini...</p>
                     </motion.div> )
-                : (
+                } 
+                { (!pressBtn.lucy && !pressBtn.kyou && !pressBtn.mona) ? 
+                    <div className="flex justify-center items-center h-screen">
+                        <p className="text-xs sm:text-base md:text-lg text-white bg-[#3A3A3A] border-white border rounded-xl p-5 font-semibold">Seleziona un gatto cliccando il bottone in alto </p>
+                    </div>
+                :
                     <div className='my-10 rounded-lg grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 px-10'>
                         {photos.map((photo)=>{
                             return (
@@ -57,14 +62,11 @@ export default function Gallery(){
                                 />   
                             )
                         })}
-                    </div>)
-                }
-
-                {(!pressBtn.lucy && !pressBtn.kyou && !pressBtn.mona) && (
-                    <div className="flex justify-center items-center mt-72 ">
-                        <p className="text-lg text-white bg-[#3A3A3A] border-white border rounded-xl p-5 font-semibold">Seleziona un gatto cliccando il bottone in alto </p>
                     </div>
-                )}
+                }
+                
+
+                
         
         </>
     )

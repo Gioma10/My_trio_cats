@@ -2,15 +2,15 @@ import Event from "./Event";
 
 export default function Timeline() {
     const habits = [
-        { direction: 'left', h3: '08:30 / 9:00 - Colazione', p: 'Ci svegliamo e facciamo colazione' },
-        { direction: 'right', h3: '9:00 / 12:00 - Riposo', p: 'Pausa relax per digerire e riprendere le forze' },
-        { direction: 'left', h3: '12:00 / 13:30 - Ispezione', p: "Ispezione cucina e controllo qualita' del cibo" },
-        { direction: 'right', h3: '13:30 / 14:00 - Pranzo', p: 'Ci godiamo il pranzo con gusto' },
-        { direction: 'left', h3: '14:00 / 16:30 - Riposo', p: 'Digeriamo e ci prendiamo una pausa dalla giornata stressante' },
-        { direction: 'right', h3: '16:30 / 17:30 - Allenamento', p: 'Parkour e lotta in giro per la casa' },
-        { direction: 'left', h3: '17:30 / 20:00 - Riposo', p: "Riposo assoluto dovuto all'allenamento" },
-        { direction: 'right', h3: '20:00 / 21:30 - Ispezione', p: 'Fissiamo i nostri genitori cucinare nella speranza di avere qualcosa' },
-        { direction: 'left', h3: '21:30 / 8:30 - Frenesia', p: 'Alterniamo pisolini a corse sfrenate' },
+        { direction: 'left', time: '08:30 / 9:00 ' , h3: '- Colazione', p: 'Ci svegliamo e facciamo colazione' },
+        { direction: 'right', time: '9:00 / 12:00 ', h3: '- Riposo', p: 'Pausa relax per digerire e riprendere le forze' },
+        { direction: 'left' , time: '12:00 / 13:30 ', h3: '- Ispezione', p: "Ispezione cucina e controllo qualita' del cibo" },
+        { direction: 'right' , time: '13:30 / 14:00 ', h3: '- Pranzo', p: 'Ci godiamo il pranzo con gusto' },
+        { direction: 'left' , time: '14:00 / 16:30 ', h3: '- Riposo', p: 'Digeriamo e ci prendiamo una pausa dalla giornata stressante' },
+        { direction: 'right' , time: '16:30 / 17:30 ', h3: '- Allenamento', p: 'Parkour e lotta in giro per la casa' },
+        { direction: 'left' , time: '17:30 / 20:00 ', h3: '- Riposo', p: "Riposo assoluto dovuto all'allenamento" },
+        { direction: 'right' , time: '20:00 / 21:30 ', h3: '- Ispezione', p: 'Fissiamo i nostri genitori cucinare nella speranza di avere qualcosa' },
+        { direction: 'left' , time: '21:30 / 8:30 ', h3: '- Frenesia', p: 'Alterniamo pisolini a corse sfrenate' },
     ];
 
     return (
@@ -27,7 +27,7 @@ export default function Timeline() {
                     {/* Eventi della Timeline */}
                     <div className="flex flex-col gap-10">
                         {habits.map((habit, index) => (
-                            <Event key={index} direction={habit.direction} h3={habit.h3} p={habit.p} />
+                            <Event key={index} direction={habit.direction} time={habit.time} h3={habit.h3} p={habit.p} />
                         ))}
                     </div>
 

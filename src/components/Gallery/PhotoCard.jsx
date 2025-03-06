@@ -20,8 +20,8 @@ export default function PhotoCard({whoActive, cat, cat2, cat3, img}){
         }
             
             {bigPhoto && 
-                <div className="fixed flex justify-center items-center h-screen w-screen top-0 left-0 bg-black/30">
-                    <div style={{backgroundImage:`url(${img})`}} className="h-5/6 w-5/6 bg-cover bg-center bg- bg-no-repeat rounded-lg shadow-lg relative">
+                <div className="fixed flex justify-center items-center h-screen w-screen top-0 left-0 bg-black/70 z-10">
+                    <div style={{backgroundImage:`url(${img})`}} className="h-5/6 w-5/6 bg-cover bg-center bg- bg-no-repeat rounded-lg shadow-lg relative border">
                         <IoIosClose onClick={handleGlass}  className="absolute -top-4 -right-4 text-4xl  rounded-lg bg-white cursor-pointer"/>
                     </div>
                 </div>

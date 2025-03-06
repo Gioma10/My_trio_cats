@@ -8,7 +8,7 @@ export default function FilterGallery({handleSelectBtn, selectBtn}){
     
 
     return (
-        <div className="pt-20 flex justify-center items-center gap-10">
+        <div className="pt-20 flex justify-center items-center gap-5 sm:gap-10">
             <button onClick={()=>handleSelectBtn('lucy')} className={selectBtn.lucy ?  classBtnL : classBtn}>Lucy</button>
             <button onClick={()=>handleSelectBtn('kyou')} className={selectBtn.kyou ? classBtnK : classBtn}>Kyou</button>
             <button onClick={()=>handleSelectBtn('mona')} className={selectBtn.mona ? classBtnM : classBtn}>Mona</button>
