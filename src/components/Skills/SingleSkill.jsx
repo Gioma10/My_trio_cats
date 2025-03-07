@@ -8,7 +8,7 @@ export default function SingleSkill({title, percentage}){
                 <motion.div
                     initial={{width: '0%'}}
                     whileInView={{width: percentage}}
-                    transition={{duration: 1}}
+                    transition={{duration: 1, delay:1}}
                     className="border bg-white rounded-lg h-3"/>
             </div>
         </div>

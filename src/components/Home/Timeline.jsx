@@ -1,6 +1,7 @@
 import Event from "./Event";
 
 export default function Timeline() {
+
     const habits = [
         { direction: 'left', time: '08:30 / 9:00 ' , h3: '- Colazione', p: 'Ci svegliamo e facciamo colazione' },
         { direction: 'right', time: '9:00 / 12:00 ', h3: '- Riposo', p: 'Pausa relax per digerire e riprendere le forze' },
@@ -15,24 +16,24 @@ export default function Timeline() {
 
     return (
         <div className="relative h-screen overflow-hidden flex justify-center text-white">
+            
             {/* Contenitore Scrollabile */}
             <div className="h-full w-full overflow-y-auto scrollbar-hide px-4 py-8">
                 
                 {/* Contenitore della Timeline */}
-                <div className="relative flex flex-col items-center min-h-full">
+                <div className="relative flex flex-col items-center">
                     
                     {/* Linea centrale */}
-                    <div className="absolute w-1 bg-white top-0 bottom-0 left-1/2 transform -translate-x-1/2"></div>
+                    <div className="absolute w-1 bottom-0 top-0 bg-white left-1/2 transform -translate-x-1/2" />
 
                     {/* Eventi della Timeline */}
                     <div className="flex flex-col gap-10">
-                        {habits.map((habit, index) => (
-                            <Event key={index} direction={habit.direction} time={habit.time} h3={habit.h3} p={habit.p} />
-                        ))}
+                            {habits.map((habit, index) => (
+                                <Event key={index} direction={habit.direction} time={habit.time} h3={habit.h3} p={habit.p} />
+                            )
+                            )}
                     </div>
-
                 </div>
-
             </div>
         </div>
     );

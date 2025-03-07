@@ -5,6 +5,13 @@ export const slideUp = (duration = 0.8, delay = 0) => ({
     exit: { opacity: 0, y: -50, transition: { duration } }
   });
 
+export const slideDown = (duration = 0.8, delay = 0) => ({
+    initial: { opacity: 0, y: -50 },
+    animate: { opacity: 1, y: 0, transition: { duration, delay } },
+    viewport:{ once: false, amount: 0.5 }, // Attiva quando il 50% dell'elemento è visibile
+    exit: { opacity: 0, y: -50, transition: { duration } }
+  });
+
 
 
   export const slideLeft = (duration = 0.8, delay = 0) => ({
